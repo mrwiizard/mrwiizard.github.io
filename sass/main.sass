@@ -1,0 +1,665 @@
+$paddingContainer: 100px 10%
+$paddingContainerTablet: 20px 5%
+$lightBlue: #76818d
+$darkBlue: #2c3e50
+$white: white
+$headers: #E87E04
+$darkBlack: #000000
+body
+    font-size: 16px
+    line-height: 18px
+    font-weight: normal
+    color: $lightBlue
+.container
+    margin: 0 auto
+    max-width: 1440px
+    padding: $paddingContainer
+h1
+    text-align: center
+    color: $darkBlue
+    font-size: 3.5em
+    line-height: 60px
+    font-weight: 600
+h2
+    text-align: center
+    color: $darkBlue
+    font-size: 2em
+    line-height: 35px
+    font-weight: 500
+    margin-bottom: 0.5em
+    text-transform: uppercase
+h2:after
+    content: ""
+    height: 3px
+    display: block
+    width: 70%
+    background-color: $headers
+    margin: auto
+    transform: translateY(0.5em)
+h4
+    color: $darkBlue
+
+.btn
+    padding: 15px
+    color: $darkBlack
+    border: 1px solid $darkBlack
+    border-radius: 10px
+    text-align: center
+    min-width: 120px
+    &:hover
+        color: $white
+        background-color: $darkBlue
+    &_header
+        flex-basis: 40%
+
+.header
+    display: flex
+    flex-flow: column
+    &-top
+        padding-top: 0
+        padding-bottom: 0
+        z-index: 2
+        display: flex
+        flex-flow: column
+        justify-content: space-between
+        align-items: center
+        float: left
+        margin: auto 0
+        min-height: 220px
+        &_wrapper
+            position: relative
+            display: flex
+            height: 100vh
+            background: url(../img/headerBackground.jpg) center no-repeat
+            background-position-x: 80%
+            background-size: cover
+        &_wrapper::before
+            z-index: 1
+            content: ''
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(90deg, rgba(255,251,251,0.4) 40%, rgba(157,157,157,0.1) 76%, rgba(2,0,36,0.1) 100%)
+        &__description
+            color: $darkBlack
+            font-size: 2em
+            line-height: 35px
+            font-weight: 500
+        &__btns
+            display: flex
+            justify-content: space-between
+            width: 50%
+            min-width: 280px
+    &-bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        color: $white
+        padding-top: 20px
+        padding-bottom: 20px
+        &_wrapper
+            z-index: 2
+            position: fixed
+            width: 100%
+            background-color: $darkBlue
+        &__logo
+            display: flex
+            font-size: 1.2em
+            line-height: 25px
+            font-weight: 600
+        .menu
+            font-size: 1em
+            line-height: 30px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-basis: 60%
+            text-transform: uppercase  
+            &__item:not(:last-child)
+                  margin-right: 1.5em
+            &__link
+                color: $white
+            &__link:hover
+                cursor: pointer
+                color: $headers
+        &__dropdown
+            display: none
+            height: 26px
+            flex-flow: column
+            justify-content: space-between
+            span
+                width: 35px
+                height: 5px
+                background-color: $lightBlue
+                border-radius: 10px
+
+.about
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: space-between
+    margin: auto
+    width: 100%
+    background-color: white
+    & *:not(:last-child)        
+        margin-bottom: 2em
+    &-wrapper
+        background-color: white
+        position: relative
+        display: flex
+        width: 100%
+    &-img
+        height: 200px
+        width: 200px
+        background: url(../img/about.jpg) center center no-repeat
+        background-size: cover
+        background-position: 30% 1% 
+        border-radius: 100%
+    &-description
+        text-align: justify
+
+section[name="services"]
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+    background: url(../img/servicesBackground.jpg) center no-repeat
+    background-size: cover
+    background-attachment: fixed
+    &::before
+        position: absolute
+        top: 0
+        left: 0
+        content: ""
+        width: 100%
+        height: 100%
+        background: #ffffffea
+.services
+    position: relative
+    z-index: 1
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    align-items: center
+    padding-left: 0
+    padding-right: 0
+    &-title
+        margin-bottom: 2em
+    &-cards
+        display: flex
+        justify-content: space-between
+        width: 100%
+        flex-wrap: wrap
+        max-width: 1140px
+        &__item
+            display: flex
+            flex-flow: column
+            align-items: center
+            justify-content: space-between
+            flex-basis: 20%
+            margin-bottom: 2em
+            > *
+                margin-bottom: 2em
+        &__img
+            width: 20%
+            height: auto
+        &__title
+            color: $headers
+            font-size: 1.1em
+            line-height: 20px
+            text-align: center
+        &__description
+            text-align: center
+
+.portfolio
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    align-items: center
+    padding-left: 0
+    padding-right: 0
+    &-title
+        margin-bottom: 1.2em
+    &>:not(:last-child):not(:first-child)
+        margin-bottom: 2em
+    &-description
+        text-align: center
+    &-filter
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        max-width: 500px
+        min-width: 300px
+        li:nth-child(odd):hover          
+            cursor: pointer
+            color: $headers
+        li:first-child
+            color: $headers
+    &-gallary
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        align-items: center
+        max-width: 1240px
+        width: 100%
+        &__item
+            display: flex
+            justify-content: center
+            transition-property: height, flex-basis, transform
+            transition-duration: .5s
+            transition-timing-function: ease-out
+            height: 0
+            flex-basis: 0
+            align-items: center
+            overflow: hidden
+            border: 1px solid grey
+            border-radius: 5px
+        &__img
+            max-height: 100%
+            height: auto
+            width: auto
+        &__item:hover
+            cursor: pointer
+            transform: scale(1.2)
+            transition: all ease .5s
+        .active
+            height: 200px
+            flex-basis: 22.5%
+            margin-right: 0.9em
+            margin-left: 0.9em
+            margin-bottom: 1.5em
+    .modal
+        display: none
+        position: fixed
+        flex-flow: column
+        z-index: 2
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background: rgba(0, 0, 0, 0.7 )
+        &-content
+            position: relative
+            margin: auto
+        &__close
+            position: absolute
+            right: 20px
+            bottom: 20px
+            transform: translateY(-50%)
+            font-size: 40px
+            color: white
+            &:hover
+                cursor: pointer
+        &__img
+            position: relative
+            margin: auto
+            max-width: 700px
+            height: auto
+
+
+section[name = "skills"]
+    position: relative
+    width: 100%
+    height: 100%
+    background: url(../img/servicesBackground.jpg) center no-repeat
+    background-size: cover
+    background-attachment: fixed
+    &::before
+        position: absolute
+        top: 0
+        left: 0
+        content: ""
+        width: 100%
+        height: 100%
+        background: #ffffffea
+.skills
+    display: flex
+    flex-flow: column
+    align-items: center
+    position: relative
+    z-index: 1
+    &-cards
+        margin-top: 2em
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        min-width: 760px
+        &__item
+            display: flex
+            flex-flow: column
+            align-items: center
+            flex-basis: 32%
+            margin-bottom: 2.5em
+        &__description
+            color: $headers
+        &__circle
+            position: relative
+            margin-bottom: 1em
+        span
+            color: $darkBlue
+            font-size: 1.2em
+            line-height: 1.2em
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        canvas
+            height: 150px
+            width: 150px
+
+section[name = "experience"]
+    background:linear-gradient(to bottom, #ffffff 0%, #f4f5f6 50%, #ffffff 100%)
+.experience
+    padding-left: 0
+    padding-right: 0
+    display: flex
+    flex-flow: column
+    align-items: center
+    max-width: 1152px
+    &-cards
+        position: relative
+        width: 100%
+        display: flex
+        flex-flow: column
+        margin-top: 2em
+        &::before
+            position: absolute
+            content: ""
+            background: grey
+            width: 1px
+            height: 70%
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &__item
+            position: relative
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin-bottom: 5em
+            min-height: 160px 
+        &__item:nth-child(odd)
+            text-align: right
+        &__item:nth-child(even)
+            text-align: left
+            justify-content: flex-end
+        &__title
+            color: $headers
+        &__text
+            flex-basis: 40%
+            *
+                margin-bottom: 0.5em
+        &__circle
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        span
+            text-transform: uppercase
+            text-align: center
+            color: $darkBlue
+            font-size: 1.2em
+            line-height: 1.2em
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        canvas
+            height: 150px
+            width: 150px
+
+section[name = "contact"]
+    position: relative
+    background: url(../img/servicesBackground.jpg) center no-repeat
+    background-attachment: fixed
+    background-size: cover
+    height: 100%
+    width: 100%
+    &::before
+        position: absolute
+        content: ""
+        left: 0
+        top: 0
+        background: linear-gradient(90deg, rgba(255,251,251,1) 0%, rgba(157,157,157,1) 0%, rgba(9,30,56,0.7749474789915967) 0%)
+        height: 100%
+        width: 100%
+.contact
+    max-width: 950px
+    position: relative
+    z-index: 1
+    display: flex
+    flex-flow: column
+    align-items: center
+    &-hr
+        display: none
+    > *
+        color: white
+        margin-bottom: 2em
+    &-description
+        text-align: center
+    &-info
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        text-align: center
+        flex-wrap: wrap
+    .info-block
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: space-between
+        height: 70px
+        width: 200px
+        &__icon
+            width: 30px
+            height: 30px
+        &__description
+            color: white
+    &-form
+        display: flex
+        flex-flow: column
+        align-items: center
+        width: 100%
+        > *
+            margin-bottom: 1em
+    .form
+        &-title
+            text-transform: uppercase
+        &-inputs
+            display: flex
+            justify-content: space-between
+            width: 100%
+            flex-wrap: wrap
+        &-field
+            height: 35px
+            border-radius: 5px
+            flex-basis: 48%
+            padding: 10px
+            opacity: 0.8
+            &::placeholder
+                font-size: 1em
+                line-height: 1em
+                padding: 10px
+            &_textarea
+                padding: 10px
+                opacity: 0.8
+                width: 100%
+                border-radius: 5px
+        &-btn
+            margin-top: 1em
+            color: white
+            padding: 15px 25px
+            background: none
+            border: 1px solid white
+            border-radius: 5px
+            font-size: 1em
+            line-height: 1em
+            font-weight: normal
+            &:hover
+                cursor: pointer
+                color: $headers
+                border-color: $headers
+
+
+            
+    
+
+@media screen and( min-width: 1441px)
+    .container
+        padding-left: 100px
+        padding-right: 100px
+
+@media screen and (max-width: 1250px)
+    .portfolio-gallary .active
+        height: 270px
+        flex-basis: 40%
+@media screen and (max-width: 1150px)
+    .services-cards
+        width: 100%
+        max-width: auto
+        &__item
+            flex-basis: 45%
+@media screen and (max-width: 1110px)
+    .services
+        .cards
+            padding-left: 1em
+            padding-right: 1em
+            min-width: auto
+            width: 100%
+            justify-content: space-between
+            &-item
+                min-width: 250px
+                flex-basis: 45%
+@media screen and (max-width: 1040px)
+    body
+        font-size: 14px
+        line-height: 18px
+    .header-bottom
+        .menu
+            transform: translateY(2em)
+            height: 0
+            order: 3
+            flex-flow: column
+            flex-basis: 100%
+            overflow: hidden
+            transition: all ease .4s
+            &__item
+                width: 100%
+                text-align: left
+                margin-right: 0 !important
+        .open
+            padding-bottom: 1.5em
+            height: 300px
+            transition: all ease .4s 
+        &_wrapper
+            position: relative
+        &_wrapper:before
+            content: ""
+            display: block
+            width: 100%
+            height: 1px
+            background-color: $lightBlue
+            position: absolute
+            top: 65px
+            left: 0
+        &__dropdown
+            display: flex
+
+@media screen and (max-width: 768px) // Tablet
+    .header
+        &-top
+            > * 
+                margin-bottom: 0.5em
+            &_wrapper
+                height: 350px
+            &_wrapper::before
+                background: linear-gradient(90deg, rgba(150,150,150,0.7) 100%, rgba(157,157,157,0.7) 76%, rgba(2,0,36,0.7) 100%)
+    .container
+        padding: $paddingContainerTablet
+    .portfolio-gallary
+        justify-content: center
+        &__img
+            max-width: 100%
+        &__item:hover
+            transform: none
+        .active
+            margin: 0
+            margin-bottom: 1em
+            flex-basis: 100%
+            height: auto
+            max-height: 300px
+    .skills-cards
+        min-width: 425px
+        justify-content: space-evenly
+        &__item
+            flex-basis: 40%
+    .experience-cards
+        &::before
+            top: 10px
+            left: 75px
+            transform: none
+            transform: translateX(-1px)
+        &__item
+            justify-content: flex-end!important
+        &__text
+            margin-left: 170px
+            flex-basis: 70%
+            text-align: justify
+        &__circle
+            left: 0
+            top: 50%
+            transform: none
+            transform: translateY(-50%)
+    .contact
+        &-hr
+            display: block
+            width: 100%
+            height: 1px
+            color: white
+
+        .info-block
+            flex-basis: 100%
+            margin-bottom: 1.2em
+        .form-field
+            flex-basis: 100%
+        .form-field:first-child
+            margin-bottom: 1em
+
+
+@media screen and (max-width: 580px)
+    .portfolio-gallary
+        &__img
+            width: 100%
+            height: auto
+        .active
+            width: 100%
+            height: auto
+            width: auto
+            flex-basis: auto
+            margin: 0
+            margin-bottom: 1em
+
+@media screen and (max-width: 425px)
+    .services-cards__item
+            flex-basis: 100%
+    .portfolio-gallary
+        &__img
+            width: 100%
+            height: auto
+        .active
+    .skills-cards
+        min-width: 320px
+        justify-content: space-evenly
+        &__item
+            flex-basis: 100%
+    body *
+        transition: none
+        transition-timing-function: none
