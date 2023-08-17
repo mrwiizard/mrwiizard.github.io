@@ -139,39 +139,41 @@
             <h6 class="section-title mb-6">Portfolio</h6>
 
             <div class="portfolio container">
-                <p class="portfolio-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="portfolio-description">insight of Works i have Made for my clients.</p>
                 <ul class="portfolio-filter">
                     <li class="potfolio-filter__item filter_all" name="">All</li>
                     <li>|</li>
-                    <li class="potfolio-filter__item horses" name="">Horses</li>
+                    <li class="potfolio-filter__item web" name="">Web Development</li>
                     <li>|</li>
-                    <li class="potfolio-filter__item caparol" name="">Caparol Center</li>
+                    <li class="potfolio-filter__item logo" name="">Logo Artwork</li>
                     <li>|</li>
-                    <li class="potfolio-filter__item filter_branding" name="">Branding</li>
+                    <li class="potfolio-filter__item branding" name="">Branding</li>
                 </ul>
                 <div class="portfolio-gallary">
-                    <div class="portfolio-gallary__item filter_web active">
+                    <div class="portfolio-gallary__item web active">
                         <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/expressglobal.png"></img>
                     </div>
-                    <div class="portfolio-gallary__item caparol active" name="">
+                    <div class="portfolio-gallary__item web active" name="">
                         <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/kaphgh.png"></img>
                     </div>
-                    <div class="portfolio-gallary__item horses active" name="">
+                    <div class="portfolio-gallary__item web active" name="">
                         <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/ktu.png"></img>
                     </div>
-                    <div class="portfolio-gallary__item caparol active" name="">
-                        <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol2.png"></img>
+                    <div class="portfolio-gallary__item web active" name="">
+                        <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/alpha.png"></img>
                     </div>
-                    <div class="portfolio-gallary__item caparol active" name="">
-                        <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol3.png"></img>
+                    <div class="portfolio-gallary__item branding active" name="">
+                        <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/lables.png"></img>
                     </div>
-                    <div class="portfolio-gallary__item horses active" name="">
-                        <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryHorses2.png"></img>
+                    <div class="portfolio-gallary__item logo active" name="">
+                        <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/akonoba logo.jpg"></img>
                     </div>
-                    <div class="portfolio-gallary__item caparol active" name="">
-                        <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol4.png"></img>
+                    <div class="portfolio-gallary__item logo active" name="">
+                        <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/Akonoba logo2.jpg"></img>
                     </div>
-                    <div class="portfolio-gallary__item filter_branging active" name=""></div>
+                    <div class="portfolio-gallary__item branding active" name="">
+                        <img width="600px" height="400px" class="portfolio-gallary__img" src="assets/imgs/SRCWEEKDATE 1.jpg"></img>
+                    </div>
     
                     <div class="modal">
                         <div class="modal-content">
@@ -182,6 +184,48 @@
                 </div>
             </div>
     </section> <!-- end of portfolio section -->
+
+
+
+
+
+
+
+    <script>
+        const filterItems = document.querySelectorAll('.portfolio-filter li');
+        const galleryItems = document.querySelectorAll('.portfolio-gallary__item');
+    
+        filterItems.forEach(el => el.addEventListener('click', () => {
+            el.style.color = "#E87E04";
+            for (let i = 0; i < filterItems.length; i++) {
+                if (filterItems[i] == el) continue;
+                filterItems[i].style.color = "grey";
+            }
+    
+            const filterClassName = cutClassName(el);
+    
+            galleryItems.forEach(elem => {
+                if (filterClassName === 'filter_all' || elem.classList.contains(filterClassName)) {
+                    elem.style.display = 'block';
+                } else {
+                    elem.style.display = 'none';
+                }
+            });
+        }));
+    
+        function cutClassName(el) {
+            let classNameFull = el.className;
+            return classNameFull.substring(classNameFull.indexOf(' ') + 1, classNameFull.length);
+        }
+    </script>
+    
+
+
+
+
+
+
+
 
     <!-- pricing section -->
     <section class="section" id="pricing">
