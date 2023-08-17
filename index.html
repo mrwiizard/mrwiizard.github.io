@@ -1,332 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <title>The Wizzard</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="assets/css/meyawo.css">
 </head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-<body>
-    <header class="header">
-        <div class="header-top_wrapper">
-            <div class="header-top container">
-                <h1> Hello, <br> I'm Isreal Boateng</h1>
-              <span> <p class="header-top__description">Developer and Designer </p> </span> 
-                <div class="header-top__btns">
-                    <a href="" class="btn btn_header">About Me</a>
-                    <a href="" class="btn btn_header">My Portfolio</a>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom_wrapper">
-            <div class="header-bottom container">
-                <div class="header-bottom__logo">Mr.WizzarD</div>
-                <nav class="header-bottom__navigation menu">
-                    <li class="menu__item">
-                        <a href="#about" class="menu__link">About</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#services" class="menu__link">Services</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#portfolio" class="menu__link">Portfolio</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#skills" class="menu__link">Skills</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#resume" class="menu__link">Resume</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#contact" class="menu__link">Contact</a>
-                    </li>
-                </nav>
-                <div class="header-bottom__dropdown">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-
-    </header>
-    <section class="about-wrapper" id="about">
-        <div class="about container">
-            <h2 class="about-title">About me</h2>
-            <div class="about-img"></div>
-            <p class="about-description">Israel Boateng: Full Stack Python Developer, Graphic Designer, and Pentester with 3 Years of Experience.
-                 Expert in crafting immersive web experiences, designing captivating visuals, and securing digital landscapes. Let's transform ideas into reality</p>
-            <a href="" class="btn btn_aboutMe">Interested to know me more?</a>
-        </div>
-    </section>
-    <section name="services" id="services">
-        <div class="services container">
-            <h2 class="services-title">My Services</h2>
-            <div class="services-cards">
-                <div class="services-cards__item">
-                    <h3 class="services-cards__title">Web Development</h3>
-                    <img src="img/css3.svg" alt="" class="services-cards__img">
-                    <p class="services-cards__description">Crafting Dynamic Web Solutions with HTML, CSS, JavaScript, and Django. Elevate your online presence with customized websites powered by a blend of modern technologies,
-                         tailored to your unique needs.</p>
-                </div>
-                <div class="services-cards__item">
-                    <h3 class="services-cards__title">Front-End разработка</h3>
-                    <img src="img/frontend.svg" alt="" class="services-cards__img">
-                    <p class="services-cards__description">Работа по таскам работадателя.</p>
-                </div>
-                <div class="services-cards__item">
-                    <h3 class="services-cards__title">Поддержка сайтов</h3>
-                    <img src="img/site.svg" alt="" class="services-cards__img">
-                    <p class="services-cards__description">Настройка хостинга, подключение домена и средств разработки, использующихся на сайте.</p>
-                </div>
-                <div class="services-cards__item">
-                    <h3 class="services-cards__title">Marketing</h3>
-                    <img src="" alt="" class="services-cards__img">
-                    <p class="services-cards__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section name="portfolio" id="portfolio">
-        <div class="portfolio container">
-            <h2 class="portfolio-title">My portfolio</h2>
-            <p class="portfolio-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <ul class="portfolio-filter">
-                <li class="potfolio-filter__item filter_all" name="">All</li>
-                <li>|</li>
-                <li class="potfolio-filter__item horses" name="">Horses</li>
-                <li>|</li>
-                <li class="potfolio-filter__item caparol" name="">Caparol Center</li>
-                <li>|</li>
-                <li class="potfolio-filter__item filter_branding" name="">Branding</li>
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Ayoungy</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#blog">Blog</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a href="components.html" class="btn btn-primary">Components</a>
+                </li>
             </ul>
-            <div class="portfolio-gallary">
-                <div class="portfolio-gallary__item filter_web active">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/servicesBackground.jpg"></img>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
                 </div>
-                <div class="portfolio-gallary__item caparol active" name="">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol1.png"></img>
-                </div>
-                <div class="portfolio-gallary__item horses active" name="">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryHorses1.png"></img>
-                </div>
-                <div class="portfolio-gallary__item caparol active" name="">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol2.png"></img>
-                </div>
-                <div class="portfolio-gallary__item caparol active" name="">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol3.png"></img>
-                </div>
-                <div class="portfolio-gallary__item horses active" name="">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryHorses2.png"></img>
-                </div>
-                <div class="portfolio-gallary__item caparol active" name="">
-                    <img width="600px" height="400px" class="portfolio-gallary__img" src="img/gallaryCaparol4.png"></img>
-                </div>
-                <div class="portfolio-gallary__item filter_branging active" name=""></div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
 
-                <div class="modal">
-                    <div class="modal-content">
-                        <img src="" alt="" class="modal__img">
-                        <span class="modal__close">&#10005;</span>
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Emmmanuel Acheampong</span>
+            </h1>
+            <p class="header-subtitle">GRAPHIC DESIGNER</p>            
+
+            <button class="btn btn-primary">Visit My Works</button>
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/man.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        As a dedicated Graphic Designer, I harnessed the power of visual storytelling to create compelling designs that resonated with audiences. Merging creativity with technical prowess, I crafted captivating visuals that communicated brand messages and drove engagement.
+                        <br> Through a keen eye for aesthetics and a passion for design, I consistently transformed ideas into impactful and visually stunning assets."            
+                    </p>
+                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6">Service</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/pencil-case.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Adipisicing</h6>
+                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/responsive.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Sapiente</h6>
+                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/toolbox.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Placeat</h6>
+                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/analytics.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Iusto</h6>
+                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
         </div>
-    </section>
-    <section name="skills" id="skills">
-        <div class="skills container ">
-            <h2 class="skills-title ">My Skills</h2>
-            <div class="skills-cards ">
-                <div class="skills-cards__item ">
-                    <div class="skills-cards__circle " id="90 ">
-                        <span class="skills-cards__percent ">90 %</span>
-                        <canvas height="300px " width="300px "></canvas>
-                    </div>
-                    <p class="skills-cards__description ">HTML5</p>
+    </section><!-- end of service section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h6 class="section-title mb-6">Portfolio</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h5>
+                                <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>                         
+                        </span>                     
+                    </a>
                 </div>
-                <div class="skills-cards__item ">
-                    <div class="skills-cards__circle " id="80 ">
-                        <span class="skills-cards__percent ">80 %</span>
-                        <canvas height="300px " width="300px "></canvas>
-                    </div>
-                    <p class="skills-cards__description ">CSS3</p>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h5>
+                                <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>                         
+                        </span>                         
+                    </a>
                 </div>
-                <div class="skills-cards__item ">
-                    <div class="skills-cards__circle " id="50 ">
-                        <span class="skills-cards__percent ">50 %</span>
-                        <canvas height="300px " width="300px "></canvas>
-                    </div>
-                    <p class="skills-cards__description ">JavaScript</p>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Designing</h5>
+                                <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>                         
+                        </span>                     
+                    </a>
                 </div>
-                <div class="skills-cards__item ">
-                    <div class="skills-cards__circle " id="10 ">
-                        <span class="skills-cards__percent ">30 %</span>
-                        <canvas height="300px " width="300px "></canvas>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    <!-- pricing section -->
+    <section class="section" id="pricing">
+        <div class="container text-center">
+            <p class="section-subtitle">How Much I Charge ?</p>
+            <h6 class="section-title mb-6">My Pricing</h6>
+            <!-- row -->
+            <div class="pricing-wrapper">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/scooter.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
-                    <p class="skills-cards__description ">JQuery</p>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Free</h6>
+                        <div class="pricing-card-list">
+                            <p>accusamus reprehenderit</p>
+                            <p>provident dolorem </p>
+                            <p>quos neque</p>
+                            <p>fugiat quibusdam</p>
+                            <p><i class="ti-close"></i></p>
+                            <p><i class="ti-close"></i></p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>$</span>
+                        <span>0.00/Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
                 </div>
-                <div class="skills-cards__item ">
-                    <div class="skills-cards__circle " id="40 ">
-                        <span class="skills-cards__percent ">70 %</span>
-                        <canvas height="300px " width="300px "></canvas>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/shipped.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
-                    <p class="skills-cards__description ">SASS</p>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Basic</h6>
+                        <div class="pricing-card-list">
+                            <p>accusamus reprehenderit</p>
+                            <p>provident dolorem </p>
+                            <p>quos neque</p>
+                            <p>fugiat quibusdam</p>
+                            <p>accusamus laboriosam</p>
+                            <p><i class="ti-close"></i></p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>$</span>
+                        <span>9.99/Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
                 </div>
-                <div class="skills-cards__item ">
-                    <div class="skills-cards__circle " id="73 ">
-                        <span class="skills-cards__percent ">70 %</span>
-                        <canvas height="300px " width="300px "></canvas>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/startup.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
-                    <p class="skills-cards__description ">Git</p>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Premium</h6>
+                        <div class="pricing-card-list">
+                            <p>accusamus reprehenderit</p>
+                            <p>provident dolorem </p>
+                            <p>quos neque</p>
+                            <p>fugiat quibusdam</p>
+                            <p>accusamus laboriosam</p>
+                            <p>inventore omnis</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>$</span>
+                        <span>99.9/Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
+                </div>
+
+            </div><!-- end of pricing wrapper -->
+        </div> <!-- end of container -->
+    </section><!-- end of pricing section -->
+
+    <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+    <!-- testimonial section -->
+    <section class="section" id="testmonial">
+        <div class="container text-center">
+            <p class="section-subtitle">What Think Client About Me ?</p>
+            <h6 class="section-title mb-6">Testmonial</h6>
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">                           
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="testimonial-card-title">Emily Reb</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="assets/imgs/avatar3.jpg" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">                        
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="testimonial-card-title">Emily Reb</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section name="experience" id="resume">
-        <div class="experience container">
-            <h2 class="experience-title">Experience</h2>
-            <div class="experience-cards">
-
-                <div class="experience-cards__item">
-                    <div class="experience-cards__text">
-                        <h4 class="experience-cards__header">PapaVi Multimedia</h4>
-                        <p class="experience-cards__title">Graphic Designer </p>
-                        <p class="experience-cards__description">Contributed as a skilled Graphic Designer, infusing creativity and visual finesse into projects. Translated concepts into captivating visuals,
-                             enhancing brand identity and user engagement. Collaborated closely with cross-functional teams to deliver designs that seamlessly blended aesthetics and functionality.</p>
-                    </div>
-                    <div class="experience-cards__circle">
-                        <span>
-                                feb 2013 <br> - <br> present
-                            </span>
-                        <canvas height="300px" width="300px"></canvas>
-                    </div>
+        </div> <!-- end of container -->
+    </section> <!-- end of testimonial section -->
+    
+    <!-- blog section -->
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+            <p class="section-subtitle">Recent Posts?</p>
+            <h6 class="section-title mb-6">Blog</h6>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="assets/imgs/img-1.jpg" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Consectetur adipisicing elit</h6>
 
-                <div class="experience-cards__item">
-                    <div class="experience-cards__text">
-                        <h4 class="experience-cards__header">Express Global Limited</h4>
-                        <p class="experience-cards__title">Web Developer</p>
-                        <p class="experience-cards__description">Served as a proficient Web Developer at Express Global Limited, contributing technical expertise and innovation to web development initiatives. Designed and coded dynamic, user-centric websites, ensuring seamless functionality and immersive user experiences.
-                             Collaborated seamlessly with cross-functional teams to deliver cutting-edge digital solutions that aligned with business goals and exceeded client expectations. </p>
-                    </div>
-                    <div class="experience-cards__circle">
-                        <span>
-                                nov 2011 <br> - <br> jan 2013
-                            </span>
-                        <canvas height="300px" width="300px"></canvas>
-                    </div>
+                    <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                        <a href="#"><i class="ti-comment"></i> 123</a>
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt qui sit velit delectus voluptates, repellat ipsum culpa id deleniti. Rerum debitis facilis accusantium neque numquam mollitia modi quasi distinctio.</p>
+
+                    <p><b>Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur repudiandae.</b></p>
+                    <p>Magnam in repellat enim harum omnis aperiam! Explicabo illo, commodi, dolor blanditiis cupiditate harum nisi vero accusamus laudantium voluptatibus dolores quae obcaecati.</p>
+
+                    <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
                 </div>
+            </div><!-- end of blog wrapper -->
 
-                <div class="experience-cards__item">
-                    <div class="experience-cards__text">
-                        <h4 class="experience-cards__header">Digital Marketer</h4>
-                        <p class="experience-cards__title">Cicamp Creation Center</p>
-                        <p class="experience-cards__description">Played a pivotal role as a Digital Marketer, driving online success through strategic planning and execution. Leveraged data-driven insights to optimize campaigns, boost brand visibility, and engage target audiences effectively.
-                             Collaborated with diverse teams to implement cohesive digital strategies, resulting in enhanced online presence and measurable business growth.</p>
-                    </div>
-                    <div class="experience-cards__circle">
-                        <span>
-                                dec 2009 <br> - <br> may 2011
-                            </span>
-                        <canvas height="300px" width="300px"></canvas>
-                    </div>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="assets/imgs/img-2.jpg" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Explicabo illo</h6>
 
+                    <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 456</a>
+                        <a href="#"><i class="ti-comment"></i> 264</a>
+                    </p>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit excepturi laborum enim, vitae ipsam atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis iusto omnis praesentium? Laborum placeat sit adipisci illum tempore maxime, esse qui quae? Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla non dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere, delectus eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
+
+                    <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="email" class="form-control" placeholder="Enter Email"requried>                 
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something"></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                    </div>
+                </div>  
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
             </div>
-            <h2 class="experience-title">Education</h2>
-            <div class="experience-cards">
-                <div class="experience-cards__item">
-                    <div class="experience-cards__text">
-                        <h4 class="experience-cards__header">Koforidua Technical University</h4>
-                        <p class="experience-cards__title">Bachelor In Technology in computer Science </p>
-                        <p class="experience-cards__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus assumenda dignissimos ad, deserunt ipsum facere?</p>
-                    </div>
-                    <div class="experience-cards__circle">
-                        <span>
-                                - <br> - <br> -
-                            </span>
-                        <canvas height="300px" width="300px"></canvas>
-                    </div>
-                </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
-                <div class="experience-cards__item">
-                    <div class="experience-cards__text">
-                        <h4 class="experience-cards__header">СПбГУТ Им. Бонч - Бруевича</h4>
-                        <p class="experience-cards__title">Информационные Системы и Технологии</p>
-                        <p class="experience-cards__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus assumenda dignissimos ad, deserunt ipsum facere?</p>
-                    </div>
-                    <div class="experience-cards__circle">
-                        <span>
-                                2018 <br> - <br> нас.
-                            </span>
-                        <canvas height="300px" width="300px"></canvas>
-                    </div>
-                </div>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
-                <div class="experience-cards__item">
-                    <div class="experience-cards__text">
-                        <h4 class="experience-cards__header">Лицей №2</h4>
-                        <p class="experience-cards__title">High School Degree</p>
-                        <p class="experience-cards__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus assumenda dignissimos ad, deserunt ipsum facere?</p>
-                    </div>
-                    <div class="experience-cards__circle">
-                        <span>
-                                2015 <br> - <br> 2018
-                            </span>
-                        <canvas height="300px" width="300px"></canvas>
-                    </div>
-                </div>
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
 
-            </div>
-        </div>
-    </section>
-    <section name="contact" id="contact">
-        <div class="contact container">
-            <h2 class="contact-title">Contact me</h2>
-            <p class="contact-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui commodi provident quam quos fugit reiciendis, voluptatibus tempore et.</p>
-            <div class="contact-info">
-                <div class="info-block">
-                    <img class="info-block__icon" src="img/map.svg"></img>
-                    <div class="info-block__description">Street here</div>
-                </div>
-                <div class="info-block">
-                    <img class="info-block__icon" src="img/message.svg"></img>
-                    <div class="info-block__description">email</div>
-                </div>
-                <div class="info-block">
-                    <img class="info-block__icon" src="img/phone.svg"></img>
-                    <div class="info-block__description">+7 920 127 90 51</div>
-                </div>
-            </div>
-            <hr class="contact-hr">
-            <form action="" class="contact-form">
-                <p class="form-title">Leave me a messege</p>
-                <div class="form-inputs">
-                    <input type="name" class="form-field" placeholder="Name">
-                    <input type="email" class="form-field" placeholder="Email">
-                </div>
-                <textarea name="" id="" cols="30" rows="5" class="form-field_textarea" placeholder="Message"></textarea>
-                <button type="submit" class="form-btn">Send Message</button>
-            </form>
-            <div class="contact-links">
-                <img src="" alt="" class="contact-link">
-                <img src="" alt="" class="contact-link">
-                <img src="" alt="" class="contact-link">
-                <img src="" alt="" class="contact-link">
-                <img src="" alt="" class="contact-link">
-                <img src="" alt="" class="contact-link">
-            </div>
-        </div>
-    </section>
-    <script src="js/main.js "></script>
-    <script src="js/scroll.js"></script>
 </body>
-
 </html>
