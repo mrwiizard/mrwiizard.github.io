@@ -1,0 +1,22 @@
+Common Git Commands:
+
+1. Check status of changes:
+   git status
+
+2. Add all changes:
+   git add .
+   
+   (Or add specific file:
+   git add filename)
+
+3. Commit changes:
+   git commit -m "Your message here"
+
+4. Push to GitHub:
+   git push origin main
+
+Full sequence for updating:
+git status
+git add .
+git commit -m "Your message"
+git push origin main

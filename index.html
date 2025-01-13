@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="p:domain_verify" content="aa024277e81a02aee2d63f64d12dd31d"/>
+    <meta charset="utf-8">
+    <meta name="p:domain_verify" content="aa024277e81a02aee2d63f64d12dd31d"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Welcome, Explore my work, projects, and skills in web development, graphic design, and cybersecurity.">
     <meta name="author" content="Devcrud">
     <title>Mr.Wizzard | Developer and a Designer</title>
-    <!-- font icons -->
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/meyawo.css" as="style">
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/vendors/themify-icons/css/themify-icons.css" as="style">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        /* Critical path CSS */
+        body { opacity: 1 !important; }
+        .custom-navbar { position: fixed; width: 100%; z-index: 999; }
+        .services-section { opacity: 1 !important; }
+    </style>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
@@ -347,17 +362,22 @@
     </div> <!-- end of page footer -->
 	
 	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script defer src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script defer src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+	<script defer src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
-    <script src="assets/js/meyawo.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="assets/js/meyawo.js"></script>
+    
+    <!-- AOS (Animate on Scroll) -->
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        // Initialize AOS after window load
+        window.addEventListener('load', function() {
+            AOS.init();
+        });
     </script>
 
 </body>
