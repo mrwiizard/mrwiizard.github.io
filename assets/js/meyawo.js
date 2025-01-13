@@ -32,15 +32,22 @@ $(window).scroll(function() {
     }
 });
 
-if (document.body.clientWidth > 768) {
-    gallaryImages.forEach(el => el.addEventListener('click', () => {
-        modalWindow.style.display = "flex";
-        modalImage.src = el.src;
-    }));
+// Gallery functionality
+$(document).ready(function() {
+    const galleryImages = document.querySelectorAll('.portfolio-gallary__img');
+    
+    if (window.innerWidth > 768) {
+        if (galleryImages.length > 0) {
+            galleryImages.forEach(el => el.addEventListener('click', () => {
+                el.classList.toggle('portfolio-gallary__img--active');
+            }));
+        }
+    }
+});
 
-    modalClose.addEventListener('click', () => {
-        modalWindow.style.display = "none";
-    });
-}
+// Initialize AOS
+window.addEventListener('load', function() {
+    AOS.init();
+});
 
 // GALLARY-FILTER------------------------------------------------------------------------
