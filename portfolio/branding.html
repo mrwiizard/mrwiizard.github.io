@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Branding Portfolio - Mr.Wizzard">
+    <title>Branding Projects | Mr.Wizzard</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <a href="../index.html#portfolio" class="back-button">
+        <i class="ti-arrow-left"></i>
+        Back to Portfolio
+    </a>
+    <!-- Navigation -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html">Isreal Boateng</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="../index.html#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="../index.html#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="../index.html#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Details -->
+    <section class="section portfolio-details">
+        <div class="container">
+            <h1 class="section-title mb-5">Branding Projects</h1>
+            
+            <!-- Project Grid -->
+            <div class="portfolio-grid">
+                <!-- First Flyer Gallery -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <img src="../assets/imgs/portfolio/brand.jpg" alt="december flyer">
+                            <img src="../assets/imgs/portfolio/jimm.jpg" alt="branding">
+                            <img src="../assets/imgs/portfolio/useesfer.jpg" alt="brand">
+                        </div>
+                        <div class="gallery-arrows">
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 0)">
+                                <i class="ti-angle-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 0)">
+                                <i class="ti-angle-right"></i>
+                            </button>
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Business Identy branding</h3>
+                        <p>A collection of creative campaign and promotional materials</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Affinity Designer</span>
+                            <span class="tech-tag">Adobe Photoshop</span>
+                            <span class="tech-tag">Illustrator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Flyer Gallery -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <img src="../assets/imgs/portfolio/shirt.jpg" alt="december flyer">
+                            <img src="../assets/imgs/portfolio/shirt33.jpg" alt="pop">
+                            <img src="../assets/imgs/portfolio/shirtbrand.jpg" alt="zonda">
+                        </div>
+                        <div class="gallery-arrows">
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 1)">
+                                <i class="ti-angle-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 1)">
+                                <i class="ti-angle-right"></i>
+                            </button>
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Shirt Branding</h3>
+                        <p>Brand identity and logo designs for various clients</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Affinity Designer</span>
+                            <span class="tech-tag">Adobe Illustrator</span>
+                            <span class="tech-tag">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="https://mrwizzard.github.io">MrWizzard</a></p>
+        </footer>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="../assets/js/meyawo.js"></script>
+
+    <!-- Gallery Script -->
+    <script>
+        // Get all galleries
+        const galleries = document.querySelectorAll('.gallery-container');
+        const navs = document.querySelectorAll('.gallery-nav');
+        const currentIndexes = new Array(galleries.length).fill(0);
+
+        // Initialize each gallery
+        galleries.forEach((gallery, galleryIndex) => {
+            const images = gallery.querySelectorAll('img');
+            const nav = navs[galleryIndex];
+
+            // Create navigation dots for each gallery
+            images.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.onclick = () => goToSlide(index, galleryIndex);
+                nav.appendChild(dot);
+            });
+
+            // Update initial dots
+            updateDots(galleryIndex);
+        });
+
+        function moveGallery(direction, galleryIndex) {
+            const images = galleries[galleryIndex].querySelectorAll('img');
+            currentIndexes[galleryIndex] = (currentIndexes[galleryIndex] + direction + images.length) % images.length;
+            updateGallery(galleryIndex);
+        }
+
+        function goToSlide(index, galleryIndex) {
+            currentIndexes[galleryIndex] = index;
+            updateGallery(galleryIndex);
+        }
+
+        function updateGallery(galleryIndex) {
+            galleries[galleryIndex].style.transform = `translateX(-${currentIndexes[galleryIndex] * 100}%)`;
+            updateDots(galleryIndex);
+        }
+
+        function updateDots(galleryIndex) {
+            const dots = navs[galleryIndex].querySelectorAll('button');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndexes[galleryIndex]);
+            });
+        }
+
+        // Auto-play for each gallery
+        galleries.forEach((_, index) => {
+            setInterval(() => moveGallery(1, index), 5000);
+        });
+    </script>
+</body>
+</html>
