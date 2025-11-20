@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UI/UX Portfolio - Mr.Wizzard">
+    <title>UI/UX Projects | Mr.Wizzard</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <a href="../index.html#portfolio" class="back-button">
+        <i class="ti-arrow-left"></i>
+        Back to Portfolio
+    </a>
+
+    <!-- Navigation -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html">Isreal Boateng</a>         
+            <ul class="nav">
+                <li class="item"><a class="link" href="../index.html#home">Home</a></li>
+                <li class="item"><a class="link" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="item"><a class="link" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Details -->
+    <section class="section portfolio-details">
+        <div class="container">
+            <h1 class="section-title mb-5">UI/UX Projects</h1>
+            
+            <!-- Project Grid -->
+            <div class="portfolio-grid">
+
+                <!-- First UI/UX Project -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <!-- Replace these UI screenshots with yours -->
+                            <img src="../assets/imgs/ui/project1-1.jpg" alt="mobile app ui 1">
+                            <img src="../assets/imgs/ui/project1-2.jpg" alt="mobile app ui 2">
+                            <img src="../assets/imgs/ui/project1-3.jpg" alt="mobile app ui 3">
+                        </div>
+                        <div class="gallery-arrows">
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 0)"><i class="ti-angle-left"></i></button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 0)"><i class="ti-angle-right"></i></button>
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+
+                    <div class="portfolio-content">
+                        <h3>Mobile App UI Design</h3>
+                        <p>Modern, user-focused interface designs for mobile applications.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second UI/UX Project -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <!-- Replace with web app UI images -->
+                            <img src="../assets/imgs/ui/project2-1.jpg" alt="web app ui 1">
+                            <img src="../assets/imgs/ui/project2-2.jpg" alt="web app ui 2">
+                            <img src="../assets/imgs/ui/project2-3.jpg" alt="web app ui 3">
+                        </div>
+                        <div class="gallery-arrows">
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 1)"><i class="ti-angle-left"></i></button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 1)"><i class="ti-angle-right"></i></button>
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+
+                    <div class="portfolio-content">
+                        <h3>Web App UI Design</h3>
+                        <p>Clean and intuitive dashboard and web UI experiences.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Wireframing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end grid -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright 
+            <script>document.write(new Date().getFullYear())</script> 
+            &copy; <a href="https://mrwizzard.github.io">MrWizzard</a></p>
+        </footer>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="../assets/js/meyawo.js"></script>
+
+    <!-- Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleries = document.querySelectorAll('.gallery-container');
+            const navs = document.querySelectorAll('.gallery-nav');
+            const currentIndexes = new Array(galleries.length).fill(0);
+            let autoPlayIntervals = [];
+
+            galleries.forEach((gallery, galleryIndex) => {
+                const images = gallery.querySelectorAll('img');
+                const nav = navs[galleryIndex];
+
+                const fragment = document.createDocumentFragment();
+                images.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.onclick = () => goToSlide(index, galleryIndex);
+                    fragment.appendChild(dot);
+                });
+                nav.appendChild(fragment);
+
+                updateDots(galleryIndex);
+
+                autoPlayIntervals.push(setInterval(() => {
+                    if (!document.hidden) moveGallery(1, galleryIndex);
+                }, 5000));
+            });
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    autoPlayIntervals.forEach(interval => clearInterval(interval));
+                } else {
+                    autoPlayIntervals = galleries.map((_, index) =>
+                        setInterval(() => moveGallery(1, index), 5000)
+                    );
+                }
+            });
+
+            function moveGallery(direction, galleryIndex) {
+                const images = galleries[galleryIndex].querySelectorAll('img');
+                currentIndexes[galleryIndex] =
+                    (currentIndexes[galleryIndex] + direction + images.length) % images.length;
+                updateGallery(galleryIndex);
+            }
+
+            function goToSlide(index, galleryIndex) {
+                currentIndexes[galleryIndex] = index;
+                updateGallery(galleryIndex);
+            }
+
+            function updateGallery(galleryIndex) {
+                requestAnimationFrame(() => {
+                    galleries[galleryIndex].style.transform = `translateX(-${currentIndexes[galleryIndex] * 100}%)`;
+                    updateDots(galleryIndex);
+                });
+            }
+
+            function updateDots(galleryIndex) {
+                const dots = navs[galleryIndex].querySelectorAll('button');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndexes[galleryIndex]);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
