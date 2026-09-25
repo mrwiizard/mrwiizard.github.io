@@ -37,7 +37,66 @@
             <!-- Project Grid -->
             <div class="portfolio-grid">
 
-                <!-- First UI/UX Project -->
+                <!-- First UI/UX Project: toad Marketplace -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <img src="../assets/imgs/portfolio/toad/toad-web-marketplace.png" alt="toad Web Marketplace Homepage">
+                            <img src="../assets/imgs/portfolio/toad/toad-web-browse-filter.png" alt="toad Browse Listings &amp; Filter Drawer">
+                            <img src="../assets/imgs/portfolio/toad/toad-web-listings.png" alt="toad Verified Product Feed">
+                            <img src="../assets/imgs/portfolio/toad/toad-mobile-app-ui.png" alt="toad Mobile Application UI">
+                            <img src="../assets/imgs/portfolio/toad/toad-brand-concept.jpg" alt="toad Nature to Logo Brand Design">
+                        </div>
+                        <div class="gallery-arrows">
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 0)"><i class="ti-angle-left"></i></button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 0)"><i class="ti-angle-right"></i></button>
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+
+                    <div class="portfolio-content">
+                        <h3>toad Marketplace UI/UX</h3>
+                        <p>Verified e-commerce marketplace interface, multi-attribute filter drawer, seller verification badges, and responsive mobile app UX.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Marketplace UI</span>
+                            <span class="tech-tag">Mobile &amp; Web</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Design System</span>
+                        </div>
+                        <a href="toad.html" class="btn btn-outline-primary btn-sm mt-3" style="border-radius: 20px;">Read Case Study &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Second UI/UX Project: iSmart -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <img src="../assets/imgs/portfolio/ismart/ismart-web-hero.png" alt="iSmart Hero Experience">
+                            <img src="../assets/imgs/portfolio/ismart/ismart-web-dashboard.png" alt="iSmart Business Dashboard">
+                            <img src="../assets/imgs/portfolio/ismart/ismart-web-ecosystem.png" alt="iSmart Ecosystem Architecture">
+                            <img src="../assets/imgs/portfolio/ismart/ismart-web-payments.png" alt="iSmart End to End Payments">
+                        </div>
+                        <div class="gallery-arrows">
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 1)"><i class="ti-angle-left"></i></button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 1)"><i class="ti-angle-right"></i></button>
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+
+                    <div class="portfolio-content">
+                        <h3>iSmart Fintech Web Platform &amp; Dashboard</h3>
+                        <p>High-performance dark-mode financial portal, dual consumer/merchant ecosystems, and real-time operations dashboard.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Fintech UI</span>
+                            <span class="tech-tag">Design System</span>
+                            <span class="tech-tag">Dashboard UX</span>
+                            <span class="tech-tag">Figma</span>
+                        </div>
+                        <a href="ismart.html" class="btn btn-outline-primary btn-sm mt-3" style="border-radius: 20px;">Read Case Study &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Third UI/UX Project -->
                 <div class="portfolio-item">
                     <div class="flyer-gallery">
                         <div class="gallery-container">
@@ -48,8 +107,8 @@
                             <img src="../assets/imgs/ui4.png" alt="mobile app ui 4">
                         </div>
                         <div class="gallery-arrows">
-                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 0)"><i class="ti-angle-left"></i></button>
-                            <button class="gallery-arrow next" onclick="moveGallery(1, 0)"><i class="ti-angle-right"></i></button>
+                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 2)"><i class="ti-angle-left"></i></button>
+                            <button class="gallery-arrow next" onclick="moveGallery(1, 2)"><i class="ti-angle-right"></i></button>
                         </div>
                         <div class="gallery-nav"></div>
                     </div>
@@ -61,33 +120,6 @@
                             <span class="tech-tag">Figma</span>
                             <span class="tech-tag">Affinity</span>
                             <span class="tech-tag">Prototyping</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Second UI/UX Project -->
-                <div class="portfolio-item">
-                    <div class="flyer-gallery">
-                        <div class="gallery-container">
-                            <!-- Replace with web app UI images -->
-                            <img src="../assets/imgs/ui/project2-1.jpg" alt="web app ui 1">
-                            <img src="../assets/imgs/ui/project2-2.jpg" alt="web app ui 2">
-                            <img src="../assets/imgs/ui/project2-3.jpg" alt="web app ui 3">
-                        </div>
-                        <div class="gallery-arrows">
-                            <button class="gallery-arrow prev" onclick="moveGallery(-1, 1)"><i class="ti-angle-left"></i></button>
-                            <button class="gallery-arrow next" onclick="moveGallery(1, 1)"><i class="ti-angle-right"></i></button>
-                        </div>
-                        <div class="gallery-nav"></div>
-                    </div>
-
-                    <div class="portfolio-content">
-                        <h3>Web App UI Design</h3>
-                        <p>Clean and intuitive dashboard and web UI experiences.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Figma</span>
-                            <span class="tech-tag">Adobe XD</span>
-                            <span class="tech-tag">Affinity</span>
                         </div>
                     </div>
                 </div>
@@ -149,6 +181,7 @@
             });
 
             function moveGallery(direction, galleryIndex) {
+                if (!galleries[galleryIndex]) return;
                 const images = galleries[galleryIndex].querySelectorAll('img');
                 currentIndexes[galleryIndex] =
                     (currentIndexes[galleryIndex] + direction + images.length) % images.length;
@@ -156,6 +189,7 @@
             }
 
             function goToSlide(index, galleryIndex) {
+                if (!galleries[galleryIndex]) return;
                 currentIndexes[galleryIndex] = index;
                 updateGallery(galleryIndex);
             }
@@ -168,11 +202,15 @@
             }
 
             function updateDots(galleryIndex) {
+                if (!navs[galleryIndex]) return;
                 const dots = navs[galleryIndex].querySelectorAll('button');
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentIndexes[galleryIndex]);
                 });
             }
+
+            window.moveGallery = moveGallery;
+            window.goToSlide = goToSlide;
         });
     </script>
 </body>
