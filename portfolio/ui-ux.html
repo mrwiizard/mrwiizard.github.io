@@ -96,15 +96,16 @@
                     </div>
                 </div>
 
-                <!-- Third UI/UX Project -->
+                <!-- Third UI/UX Project: iSmartPay Merchant Dashboard & Mobile App -->
                 <div class="portfolio-item">
                     <div class="flyer-gallery">
                         <div class="gallery-container">
-                            <!-- Replace these UI screenshots with yours -->
-                            <img src="../assets/imgs/ui1.png" alt="mobile app ui 1">
-                            <img src="../assets/imgs/ui2.png" alt="mobile app ui 2">
-                            <img src="../assets/imgs/ui3.png" alt="mobile app ui 3">
-                            <img src="../assets/imgs/ui4.png" alt="mobile app ui 4">
+                            <img src="../assets/imgs/portfolio/ismartpay/ismartpay-merchant-dashboard.webp" alt="iSmartPay Merchant Core Web Dashboard" loading="lazy">
+                            <img src="../assets/imgs/portfolio/ismartpay/ismartpay-mobile-wallet-home.webp" alt="iSmartPay Mobile Wallet Home" loading="lazy">
+                            <img src="../assets/imgs/portfolio/ismartpay/ismartpay-mobile-sign-in.webp" alt="iSmartPay Mobile Sign In" loading="lazy">
+                            <img src="../assets/imgs/portfolio/ismartpay/ismartpay-mobile-onboarding.webp" alt="iSmartPay Mobile Onboarding, Sign In &amp; Verification Screens" loading="lazy">
+                            <img src="../assets/imgs/portfolio/ismartpay/ismartpay-mobile-app-screens.webp" alt="iSmartPay Mobile Wallet, Transactions, Profile &amp; Security Screens" loading="lazy">
+                            <img src="../assets/imgs/portfolio/ismartpay/ismartpay-dashboard-iterations.webp" alt="iSmartPay Merchant Dashboard Design Iterations" loading="lazy">
                         </div>
                         <div class="gallery-arrows">
                             <button class="gallery-arrow prev" onclick="moveGallery(-1, 2)"><i class="ti-angle-left"></i></button>
@@ -114,12 +115,34 @@
                     </div>
 
                     <div class="portfolio-content">
-                        <h3>Mobile App UI Design</h3>
-                        <p>Modern, user-focused interface designs for mobile applications.</p>
+                        <h3>iSmartPay Merchant Dashboard &amp; Mobile App</h3>
+                        <p>Fintech product for African businesses: a merchant web dashboard for revenue, payment methods, settlements and quick actions, plus a mobile wallet app covering onboarding, OTP verification, transfers, biometrics and account security.</p>
                         <div class="tech-stack">
+                            <span class="tech-tag">Fintech UI</span>
+                            <span class="tech-tag">Web Dashboard</span>
+                            <span class="tech-tag">Mobile App</span>
                             <span class="tech-tag">Figma</span>
-                            <span class="tech-tag">Affinity</span>
-                            <span class="tech-tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth UI/UX Project: GlobTalk -->
+                <div class="portfolio-item">
+                    <div class="flyer-gallery">
+                        <div class="gallery-container">
+                            <img src="../assets/imgs/portfolio/globtalk/globtalk-app-flows.webp" alt="GlobTalk International Calling, Airtime Top-Up &amp; Payment Flows" loading="lazy">
+                        </div>
+                        <div class="gallery-nav"></div>
+                    </div>
+
+                    <div class="portfolio-content">
+                        <h3>GlobTalk International Calling App</h3>
+                        <p>Mobile app for international voice calls, airtime top-up, call bundles and eSIMs, with end-to-end recharge and payment flows, success and failure states, notifications and support.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Mobile App</span>
+                            <span class="tech-tag">Telecom</span>
+                            <span class="tech-tag">Payment Flows</span>
+                            <span class="tech-tag">Figma</span>
                         </div>
                     </div>
                 </div>
@@ -211,7 +234,43 @@
 
             window.moveGallery = moveGallery;
             window.goToSlide = goToSlide;
+
+            // Click any screenshot to view it full size
+            const lightbox = document.getElementById('creativeLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+
+            document.querySelectorAll('.gallery-container img').forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightboxCaption.textContent = img.alt;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }
+
+            document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+            });
         });
     </script>
+
+    <!-- Lightbox Modal -->
+    <div id="creativeLightbox" class="creative-lightbox" role="dialog" aria-modal="true">
+        <div class="creative-lightbox-content">
+            <button class="creative-lightbox-close" id="lightboxClose" aria-label="Close modal">&times;</button>
+            <img id="lightboxImg" class="creative-lightbox-img" src="" alt="Enlarged UI design">
+            <div id="lightboxCaption" class="creative-lightbox-caption"></div>
+        </div>
+    </div>
 </body>
 </html>
