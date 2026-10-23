@@ -1,0 +1,206 @@
+/* Case study pages (portfolio/toad.html, portfolio/ismart.html) */
+
+:root {
+    --ink: #16141c;
+    --muted: #6b6878;
+    --line: #e7e5ee;
+    --panel: #f4f3f8;
+    --accent: #695aa6;
+    --page: 1040px;
+    --text: 640px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font: 400 17px/1.65 "Open Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.wrap {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Top bar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    font-size: 15px;
+}
+
+.topbar a { text-decoration: none; }
+.topbar .name { font-weight: 700; }
+.topbar .back { color: var(--muted); }
+.topbar .back:hover { color: var(--ink); }
+
+/* Intro */
+.intro { padding-top: 56px; padding-bottom: 48px; }
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.intro h1 {
+    margin: 0 0 16px;
+    font-size: clamp(40px, 7vw, 64px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -.02em;
+}
+
+.intro .summary {
+    max-width: var(--text);
+    margin: 0;
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1.55;
+}
+
+.meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    margin: 40px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.meta dt {
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.meta dd { margin: 0; font-size: 15px; }
+.meta a { color: var(--accent); font-weight: 600; text-decoration: none; }
+
+/* Sections */
+.block { padding-top: 72px; }
+
+.block h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+
+.block > .wrap > p {
+    max-width: var(--text);
+    margin: 0 0 32px;
+    color: var(--muted);
+}
+
+/* Images: shown at natural size or smaller, never stretched */
+figure { margin: 0; }
+
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+
+.stack { display: grid; gap: 24px; }
+
+/* Side-by-side images keep equal heights: each figure grows by its aspect ratio (--ar = width / height) */
+.row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.row > figure { flex: var(--ar, 1) 1 0; min-width: 0; }
+
+/* Phone screens sit on a tinted panel at a readable size */
+.phones {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 48px 24px;
+    background: var(--panel);
+    border-radius: 14px;
+}
+
+.phones figure { flex: 0 1 260px; min-width: 0; }
+.phones img { border: 0; border-radius: 28px; box-shadow: 0 20px 40px rgba(22, 20, 28, .12); }
+
+/* Next project + footer */
+.next {
+    margin-top: 96px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    border-top: 1px solid var(--line);
+}
+
+.next a {
+    display: inline-block;
+    font-size: clamp(28px, 4.5vw, 40px);
+    font-weight: 700;
+    letter-spacing: -.02em;
+    text-decoration: none;
+}
+
+.next a:hover { color: var(--accent); }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 24px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.footer a { color: var(--accent); text-decoration: none; }
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(12, 11, 16, .92);
+    cursor: zoom-out;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    body { font-size: 16px; }
+    .intro { padding-top: 32px; }
+    .intro .summary { font-size: 18px; }
+    .block { padding-top: 56px; }
+    .row { flex-direction: column; }
+    .row > figure { width: 100%; }
+    .phones { gap: 16px; padding: 32px 16px; }
+    .phones img { border-radius: 18px; }
+}
